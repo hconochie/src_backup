@@ -1,0 +1,21 @@
+INSTRUCTIONS
+
+****OPENPOSE****
+
+
+
+
+
+
+
+
+*****PREDICTION*****
+Installation: https://github.com/hconochie/src_backup/tree/main/srnn
+
+
+Running:
+>>>conda activate ros_srnn
+navigate to ~/ros_srnn_ws/src/srnn_human_motion_predict_for_ros/scripts
+1) >>>roslaunch srnn_human_motion_predict_for_ros predictor.launch checkpoint_path:=/home/hunter/prediction_data/CVPR2016_trained_models/srnn_walking/checkpoint.pik device:=cuda0
+2) >>>roslaunch srnn_human_motion_predict_for_ros motion_publisher.launch motion_dataset_path:=/home/hunter/prediction_data/h3.6m/dataset/S7/walking_1.txt
+3) >>>roslaunch srnn_human_motion_predict_for_ros visulize.launch
